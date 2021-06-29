@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "azzu9394/cicd-k8s-demo"
+    registry = "azzu9394/tomcat"
     registryCredential = 'docker_credentials'
     dockerImage = ''
   }
@@ -8,10 +8,10 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        git 'https://github.com/Azarazzu/cicd-k8s-demo-master.git'
+        git 'https://github.com/Azarazzu/springboot_DB.git'
         script{
                 def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
-                bat "${mvnHome}/bin/mvn clean install"
+                bat "${mvnHome} cd docker-compose-spring-boot && docker compose up"
         }
       }
     }
