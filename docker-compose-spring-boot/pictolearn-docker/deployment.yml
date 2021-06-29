@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: azzu9394/cicd-k8s-demo:latest
+        image: azzu9394/tomcat:latest
         ports:
         - containerPort: 8081
 ---

@@ -8,6 +8,7 @@ services: #specifies 2 microservices "web" and "mysql"
     environment: # root username and password
         - MYSQL_ROOT_PASSWORD=root
         - MYSQL_DATABASE=Users
+        
   web: # Web microservice
     build: pictolearn-docker
     image: pictolearn-docker
