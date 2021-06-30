@@ -10,8 +10,8 @@ services: #specifies 2 microservices "web" and "mysql"
         - MYSQL_DATABASE=Users
         
   web: # Web microservice
-    build: pictolearn-docker
-    image: pictolearn-docker
+    build: docker-compose.yml
+    image: dockerfile
     ports: ["5555:8080"] # expose port 5555 for the rest client to connect to
     hostname: web
     tty: true
