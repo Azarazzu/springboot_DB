@@ -10,8 +10,7 @@ pipeline {
       steps {
         git 'https://github.com/Azarazzu/springboot_DB.git'
         script{
-                def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
-                powershell "${mvnHome} /bin/mvn clean install"
+                bat "${mvnHome} /bin/mvn clean install"
         }
       }
     }
