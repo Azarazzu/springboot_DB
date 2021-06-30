@@ -11,7 +11,7 @@ pipeline {
         git 'https://github.com/Azarazzu/springboot_DB.git'
         script{
                 def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
-                bat "${mvnHome} docker compose up"
+                bat "${mvnHome} mvn clean install"
         }
       }
     }
