@@ -2,6 +2,7 @@
 Docker - compose commands to follow (Common for MAC and Windows)
 Manual Reference: https://docs.docker.com/compose/reference/
 *****************************************************************
+-----------------------------------------------------------------
 Step-1 # Builds the image
 -------------------------------------------------------------------
 docker-compose build
